@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+message Event {
+    int32 uid = 1;
+    string title = 2;
+    string city = 3;
+    float ticketprice = 4;
+    string time = 5;
+    string image = 6;
+    double lat = 7;
+    double long = 8;
+    string description = 9;
+}
+
+service EventService {
+    rpc getEvents(EventRequest) returns (EventResponse) {}
+}
+
+message EventRequest {
+    int32 id = 1;
+}
+
+message EventResponse {
+    repeated Event events = 1;
+}

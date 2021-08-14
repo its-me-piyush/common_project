@@ -20,12 +20,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey[200],
-        elevation: 2,
-        leading: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: CircleAvatar(
-            backgroundColor: Colors.black,
-          ),
+        elevation: 1,
+        leading: Icon(
+          Icons.menu,
+          color: Colors.black,
         ),
         title: Text(
           'Events',
@@ -33,6 +31,12 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.black,
           ),
         ),
+        actions: [
+          Icon(
+            Icons.more_vert,
+            color: Colors.black,
+          ),
+        ],
       ),
       backgroundColor: Colors.grey[200],
       body: FutureBuilder(

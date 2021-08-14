@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 if (value.events.length <= 0) {
                   return ch!;
                 }
-                var eventData = value.events;
+                var eventData = value.events.reversed.toList();
                 return CustomScrollView(
                   slivers: [
                     SliverList(
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 AllEventsWidget(
-                                  eventData: eventData,
+                                  eventData: eventData.reversed.toList(),
                                 ),
                               ],
                             ),
